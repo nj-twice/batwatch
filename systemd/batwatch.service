@@ -1,4 +1,5 @@
 [Unit]
+Description=batwatch - Blink the screen when battery level is too low or too high
 PartOf=graphical-session.target
 After=graphical-session.target
 Requisite=graphical-session.target
@@ -6,3 +7,6 @@ Requisite=graphical-session.target
 [Service]
 ExecStart=/usr/bin/batwatch
 Restart=on-failure
+
+[Install]
+WantedBy=default.target
